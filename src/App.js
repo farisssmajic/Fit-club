@@ -6,18 +6,27 @@ import Plans from './Components/Plans/Plans';
 import Programs from './Components/Programs/Programs';
 import Reasons from './Components/Reasons/Reasons';
 import Testimonials from './Components/Testimonials/Testimonials';
+import BMICalculator from './Components/BMICalculator/BMICalculator';
+import TrainerProfiles from './Components/TrainerProfiles/TrainerProfiles';
+import MemberDashboard from './Components/MemberDashboard/MemberDashboard';
+import { AuthProvider } from './context/AuthContext';
 
 function App() {
   return (
-    <div className="App">
-          <Hero/>
-          <Programs/>
-          <Reasons/>
-          <Plans/>
-          <Testimonials/>
-          <Join/>
-          <Footer/>
-    </div>
+    <AuthProvider>
+      <div className="App">
+            <Hero/>
+            <Programs/>
+            <Reasons/>
+            <Plans/>
+            <TrainerProfiles/>
+            <BMICalculator/>
+            <MemberDashboard/>
+            <Testimonials/>
+            <Join/>
+            <Footer/>
+      </div>
+    </AuthProvider>
   );
 }
 

@@ -3,7 +3,7 @@ import './Programs.css'
 import {programsData} from '../../data/programsData'
 import RightArrow from '../../assets/rightArrow.png'
 
-const programs = () => {
+const Programs = () => {
   return (
     <div className="programs" id="programs">
         <div className="programs-header">
@@ -17,7 +17,7 @@ const programs = () => {
                 <div className="category">
                     {program.image}
                     <span>{program.heading}</span><span>{program.details}</span>
-                    <div className="join-now"><span>Join Now</span><img src={RightArrow}/></div>
+                    <div className="join-now"><span>Join Now</span><img src={RightArrow} alt="arrow"/></div>
                 </div>
             ))}
         </div>
@@ -25,4 +25,4 @@ const programs = () => {
   )
 }
 
-export default programs
+export default Programs

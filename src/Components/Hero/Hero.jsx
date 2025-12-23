@@ -56,8 +56,8 @@ const Hero = () => {
             </div>
 
             <div className="hero-buttons">
-              <buttons className="btn">Get Started</buttons>
-              <buttons className="btn">learn More</buttons>
+              <button className="btn">Get Started</button>
+              <button className="btn">Learn More</button>
             </div>
         </div>
 
@@ -74,12 +74,12 @@ const Hero = () => {
             <span>116 BPM</span>
           </motion.div>
 
-          <img src={hero_image} alt="hero-image" className="hero-image" />
+          <img src={hero_image} alt="hero" className="hero-image" />
           <motion.img
           initial={{right:'11rem'}}
           whileInView={{right:'20rem'}}
           transition={transition}
-          src={hero_image_back} alt="hero-image-back" className="hero-image-back" />
+          src={hero_image_back} alt="background" className="hero-image-back" />
 
           <motion.div
           transition={transition}

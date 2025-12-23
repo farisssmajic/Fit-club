@@ -1,0 +1,347 @@
+.member-dashboard {
+    padding: 3rem 2rem;
+    background: linear-gradient(135deg, rgba(255, 107, 107, 0.05) 0%, transparent 100%);
+    min-height: 600px;
+}
+
+.member-dashboard-guest {
+    padding: 4rem 2rem;
+    text-align: center;
+    color: white;
+}
+
+.guest-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.guest-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+.guest-content p {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 2rem;
+}
+
+.guest-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.guest-buttons .btn {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+}
+
+.btn-secondary {
+    background: transparent;
+    border: 2px solid var(--orange);
+    color: var(--orange);
+}
+
+.btn-secondary:hover {
+    background: var(--orange);
+    color: white;
+}
+
+.auth-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.auth-modal {
+    background: rgba(20, 20, 30, 0.95);
+    border: 1px solid rgba(255, 107, 107, 0.2);
+    border-radius: 15px;
+    padding: 2rem;
+    max-width: 400px;
+    width: 90%;
+    position: relative;
+}
+
+.auth-modal h3 {
+    color: white;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.auth-modal .form-group {
+    margin-bottom: 1rem;
+}
+
+.auth-modal .form-group input {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid rgba(255, 107, 107, 0.3);
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.3);
+    color: white;
+    font-size: 1rem;
+}
+
+.auth-modal .form-group input:focus {
+    outline: none;
+    border-color: var(--orange);
+    background: rgba(255, 107, 107, 0.1);
+}
+
+.auth-modal .form-group input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.auth-modal .btn {
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.auth-toggle {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.7);
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+}
+
+.link-btn {
+    background: none;
+    border: none;
+    color: var(--orange);
+    cursor: pointer;
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+.link-btn:hover {
+    color: #ff8c5a;
+}
+
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.dashboard-header h1 {
+    color: white;
+    font-size: 2rem;
+}
+
+.dashboard-header p {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.btn-logout {
+    background: rgba(244, 67, 54, 0.2);
+    border: 1px solid #F44336;
+    color: #F44336;
+}
+
+.btn-logout:hover {
+    background: rgba(244, 67, 54, 0.3);
+}
+
+.dashboard-tabs {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    border-bottom: 2px solid rgba(255, 107, 107, 0.2);
+}
+
+.tab {
+    background: none;
+    border: none;
+    color: rgba(255, 255, 255, 0.6);
+    padding: 1rem 0;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    position: relative;
+}
+
+.tab:hover {
+    color: white;
+}
+
+.tab.active {
+    color: var(--orange);
+}
+
+.tab.active::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: var(--orange);
+}
+
+.dashboard-content {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 107, 107, 0.2);
+    border-radius: 15px;
+    padding: 2rem;
+}
+
+.dashboard-content > .btn {
+    margin-bottom: 2rem;
+}
+
+.empty-state {
+    color: rgba(255, 255, 255, 0.6);
+    text-align: center;
+    padding: 2rem;
+    font-size: 1.1rem;
+}
+
+.bookings-list,
+.progress-list {
+    display: grid;
+    gap: 1rem;
+}
+
+.booking-item,
+.progress-item {
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 107, 107, 0.2);
+    border-radius: 10px;
+    padding: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.booking-item:hover,
+.progress-item:hover {
+    border-color: var(--orange);
+    transform: translateX(4px);
+}
+
+.booking-info h4,
+.progress-info h4 {
+    color: white;
+    margin-bottom: 0.5rem;
+    text-transform: capitalize;
+}
+
+.booking-info p,
+.progress-info p {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.9rem;
+}
+
+.status {
+    display: inline-block;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+    text-transform: capitalize;
+}
+
+.status.pending {
+    background: rgba(255, 193, 7, 0.2);
+    color: #FFC107;
+}
+
+.status.confirmed {
+    background: rgba(76, 175, 80, 0.2);
+    color: #4CAF50;
+}
+
+.status.cancelled {
+    background: rgba(244, 67, 54, 0.2);
+    color: #F44336;
+}
+
+.progress-stats {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.stat .value {
+    color: var(--orange);
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.stat .label {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+}
+
+.close-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    color: var(--orange);
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.error-message {
+    color: #F44336;
+    background: rgba(244, 67, 54, 0.1);
+    padding: 0.75rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+    .member-dashboard {
+        padding: 2rem 1rem;
+    }
+
+    .dashboard-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .dashboard-header h1 {
+        font-size: 1.5rem;
+    }
+
+    .btn-logout {
+        width: 100%;
+    }
+
+    .booking-item,
+    .progress-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .progress-stats {
+        width: 100%;
+        margin-top: 1rem;
+    }
+}

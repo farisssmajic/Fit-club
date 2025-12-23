@@ -1,20 +1,33 @@
 import React from 'react'
-import { useRef } from 'react'
+import { useRef, useState } from 'react'
 import './Join.css'
 import emailjs from '@emailjs/browser'
 
 const Join = () => {
     const form = useRef();
+    const [loading, setLoading] = useState(false);
+    const [message, setMessage] = useState('');
 
     const sendEmail = (e) => {
         e.preventDefault();
-    
-        emailjs.sendForm('service_tutqjk1', 'template_tphql8n', form.current, 'nUJdRW3VPyRzodBlc')
+        setLoading(true);
+        setMessage('');
+
+        emailjs.sendForm(
+            import.meta.env.VITE_EMAILJS_SERVICE_ID,
+            import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+            form.current,
+            import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+        )
           .then((result) => {
-              console.log(result.text);
+              setMessage('Success! We will contact you soon.');
+              form.current.reset();
+              setTimeout(() => setMessage(''), 3000);
           }, (error) => {
-              console.log(error.text);
-          });
+              setMessage('Error sending message. Please try again.');
+              setTimeout(() => setMessage(''), 3000);
+          })
+          .finally(() => setLoading(false));
       };
 
   return (
@@ -32,9 +45,17 @@ const Join = () => {
         </div>
         <div className="right-j">
             <form ref={form} className="email" onSubmit={sendEmail}>
-                <input type="email" name='user-email' placeholder='Enter your Email address' />
-                <button className='btn btn-j'>Join Now</button>
+                <input
+                    type="email"
+                    name='user-email'
+                    placeholder='Enter your Email address'
+                    required
+                />
+                <button className='btn btn-j' disabled={loading}>
+                    {loading ? 'Joining...' : 'Join Now'}
+                </button>
             </form>
+            {message && <p className={`form-message ${message.includes('Success') ? 'success' : 'error'}`}>{message}</p>}
         </div>
     </div>
   )

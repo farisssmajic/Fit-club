@@ -23,7 +23,10 @@ const Header = () => {
             <li><Link onClick={()=>setMenuOpened(false)} to='programs' span={true} smooth={true}>Programs</Link></li>
             <li><Link onClick={()=>setMenuOpened(false)} to='reasons' span={true} smooth={true}>Why Us</Link></li>
             <li><Link onClick={()=>setMenuOpened(false)} to='plans' span={true} smooth={true}>Plans</Link></li>
-            <li><Link onClick={()=>setMenuOpened(false)} to='Testimonials' span={true} smooth={true}>Testemonials</Link></li>
+            <li><Link onClick={()=>setMenuOpened(false)} to='trainers' span={true} smooth={true}>Trainers</Link></li>
+            <li><Link onClick={()=>setMenuOpened(false)} to='bmi-calculator' span={true} smooth={true}>BMI</Link></li>
+            <li><Link onClick={()=>setMenuOpened(false)} to='dashboard' span={true} smooth={true}>Dashboard</Link></li>
+            <li><Link onClick={()=>setMenuOpened(false)} to='Testimonials' span={true} smooth={true}>Testimonials</Link></li>
         </ul>}
     </div>
   )
